@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { siteConfig } from "@/data/site";
@@ -46,6 +47,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <FloatingWhatsApp />
       </body>
     </html>
   );

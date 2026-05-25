@@ -5,9 +5,10 @@ export const siteConfig = {
     "Reliable rent-a-car services with clean vehicles and professional drivers for city travel, airport transfers, weddings, family trips, and outstation travel.",
   phoneDisplay: "+92 300 1234567",
   phoneHref: "tel:+923001234567",
-  whatsappNumber: "923001234567",
+  whatsappNumber: "923356868001",
   email: "info@ummatenterprises.com",
-  address: "Main Shahrah-e-Faisal, Karachi, Pakistan",
+  address:
+    "Flat No. 13, Plot 16, Gulistan Plaza, 2nd floor, G-10 Markaz, Islamabad.",
   businessHours: [
     "Monday to Saturday: 8:00 AM - 10:00 PM",
     "Sunday: 9:00 AM - 8:00 PM",
