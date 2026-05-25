@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Suzuki Alto rental car illustration</title>
+  <desc id="desc">A compact hatchback rental car on a light premium background.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f2f5f9"/>
+    </linearGradient>
+    <linearGradient id="body" x1="214" x2="752" y1="250" y2="426">
+      <stop stop-color="#26364d"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="354" x2="606" y1="202" y2="304">
+      <stop stop-color="#edf5fb"/>
+      <stop offset="1" stop-color="#93a9c1"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <circle cx="231" cy="122" r="107" fill="#f5b301" opacity="0.14"/>
+  <path d="M150 438h654" stroke="#dfe6ee" stroke-width="2" stroke-linecap="round"/>
+  <ellipse cx="480" cy="450" rx="296" ry="35" fill="#07111f" opacity="0.12"/>
+  <path d="M200 389c16-48 48-77 97-87l46-9c26-62 72-94 137-96h82c52 6 93 39 124 96l55 12c37 8 61 32 72 73l8 31c5 21-11 41-33 41H230c-24 0-40-25-30-61Z" fill="url(#body)"/>
+  <path d="M381 291c23-40 57-61 102-63h67c39 4 71 25 98 63H381Z" fill="url(#glass)"/>
+  <path d="M510 228v63" stroke="#ffffff" stroke-width="5" opacity="0.36"/>
+  <path d="M273 348c-22 6-40 17-53 33" stroke="#f5b301" stroke-width="8" stroke-linecap="round"/>
+  <path d="M706 368h58" stroke="#f5b301" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="313" cy="446" r="55" fill="#101827"/>
+  <circle cx="313" cy="446" r="21" fill="#f5b301"/>
+  <circle cx="662" cy="446" r="55" fill="#101827"/>
+  <circle cx="662" cy="446" r="21" fill="#f5b301"/>
+  <path d="M421 360h104M555 360h37" stroke="#44536a" stroke-width="7" stroke-linecap="round"/>
+</svg>

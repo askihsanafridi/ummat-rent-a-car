@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Toyota Corolla rental car illustration</title>
+  <desc id="desc">A clean executive sedan on a light premium background.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef3f8"/>
+    </linearGradient>
+    <linearGradient id="body" x1="190" x2="760" y1="250" y2="420">
+      <stop stop-color="#253041"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="330" x2="640" y1="215" y2="305">
+      <stop stop-color="#e7eff8"/>
+      <stop offset="1" stop-color="#9aadc4"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <circle cx="756" cy="122" r="116" fill="#f5b301" opacity="0.16"/>
+  <path d="M144 438h676" stroke="#dfe6ee" stroke-width="2" stroke-linecap="round"/>
+  <ellipse cx="480" cy="446" rx="330" ry="42" fill="#07111f" opacity="0.12"/>
+  <path d="M164 374c18-48 52-76 101-85l76-14c38-55 88-86 151-94h124c61 13 112 44 153 94l61 12c46 9 75 37 86 84l8 35c4 19-11 37-31 37H195c-23 0-39-22-31-69Z" fill="url(#body)"/>
+  <path d="M379 279c31-37 70-58 117-64h105c45 9 83 30 114 64H379Z" fill="url(#glass)"/>
+  <path d="M508 215v64" stroke="#ffffff" stroke-width="5" opacity="0.38"/>
+  <path d="M258 330c-30 5-53 17-70 36" stroke="#f5b301" stroke-width="8" stroke-linecap="round"/>
+  <path d="M770 355h68" stroke="#f5b301" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="296" cy="438" r="62" fill="#101827"/>
+  <circle cx="296" cy="438" r="24" fill="#f5b301"/>
+  <circle cx="688" cy="438" r="62" fill="#101827"/>
+  <circle cx="688" cy="438" r="24" fill="#f5b301"/>
+  <path d="M412 355h133M576 355h42" stroke="#415064" stroke-width="7" stroke-linecap="round"/>
+</svg>

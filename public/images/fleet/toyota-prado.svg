@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Toyota Prado rental SUV illustration</title>
+  <desc id="desc">A premium SUV rental vehicle on a clean business background.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f0f4f8"/>
+    </linearGradient>
+    <linearGradient id="body" x1="160" x2="804" y1="232" y2="426">
+      <stop stop-color="#26364d"/>
+      <stop offset="0.5" stop-color="#101827"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="330" x2="678" y1="205" y2="300">
+      <stop stop-color="#edf5fb"/>
+      <stop offset="1" stop-color="#8fa7c0"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <path d="M687 82c91 50 147 132 143 218-4 87-70 178-161 214-92 37-209 19-290-34-81-54-127-144-100-228 27-85 128-164 225-187 70-16 107-23 183 17Z" fill="#f5b301" opacity="0.13"/>
+  <path d="M128 444h704" stroke="#dfe6ee" stroke-width="2" stroke-linecap="round"/>
+  <ellipse cx="480" cy="458" rx="340" ry="42" fill="#07111f" opacity="0.12"/>
+  <path d="M145 384c18-59 55-94 112-104l72-13c41-58 92-91 153-99h124c65 12 117 45 156 99l58 12c45 10 75 38 88 84l13 48c6 23-11 46-35 46H178c-25 0-42-25-33-73Z" fill="url(#body)"/>
+  <path d="M371 274c35-47 76-72 124-76h100c47 7 88 32 123 76H371Z" fill="url(#glass)"/>
+  <path d="M509 198v76" stroke="#ffffff" stroke-width="5" opacity="0.35"/>
+  <path d="M231 337c-28 4-50 17-68 38" stroke="#f5b301" stroke-width="8" stroke-linecap="round"/>
+  <path d="M769 369h77" stroke="#f5b301" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="302" cy="454" r="70" fill="#101827"/>
+  <circle cx="302" cy="454" r="28" fill="#f5b301"/>
+  <circle cx="697" cy="454" r="70" fill="#101827"/>
+  <circle cx="697" cy="454" r="28" fill="#f5b301"/>
+  <path d="M416 360h122M573 360h46" stroke="#44536a" stroke-width="7" stroke-linecap="round"/>
+</svg>
