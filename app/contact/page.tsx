@@ -82,25 +82,16 @@ export default function ContactPage() {
           </div>
 
           <div className="min-h-[520px] overflow-hidden rounded-[8px] border border-[#e7ebf0] bg-[#f8fafc] shadow-[0_16px_44px_rgba(7,17,31,0.06)]">
-            <div className="relative h-full min-h-[520px]">
-              <div className="map-grid absolute inset-0" />
-              <div className="map-glow absolute inset-0" />
-              <div className="absolute left-1/2 top-1/2 w-[78%] -translate-x-1/2 -translate-y-1/2 rounded-[8px] border border-[#d8dde5] bg-white p-6 text-center shadow-[0_24px_70px_rgba(7,17,31,0.12)]">
-                <p className="text-sm font-semibold uppercase text-[#c89400]">
-                  Google Maps
-                </p>
-                <h2 className="mt-3 text-2xl font-semibold text-[#07111f]">
-                  Map location placeholder
-                </h2>
-                <p className="mt-3 text-sm leading-7 text-[#5f6b7a]">
-                  Add the verified Google Maps embed link for the live business
-                  location.
-                </p>
-                <p className="mt-5 text-base font-semibold text-[#07111f]">
-                  {siteConfig.address}
-                </p>
-              </div>
-            </div>
+            <iframe
+              title="Ummat Enterprises Rent-a-Car location on Google Maps"
+              src="https://maps.google.com/maps?q=Flat%20No.%2013%2C%20Plot%2016%2C%20Gulistan%20Plaza%2C%202nd%20floor%2C%20G-10%20Markaz%2C%20Islamabad&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0, minHeight: 520 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </section>

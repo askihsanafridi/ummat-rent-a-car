@@ -3,8 +3,8 @@ export const siteConfig = {
   shortName: "Ummat Rent-a-Car",
   description:
     "Reliable rent-a-car services with clean vehicles and professional drivers for city travel, airport transfers, weddings, family trips, and outstation travel.",
-  phoneDisplay: "+92 300 1234567",
-  phoneHref: "tel:+923001234567",
+  phoneDisplay: "+92 335 6868001",
+  phoneHref: "tel:+923356868001",
   whatsappNumber: "923356868001",
   email: "info@ummatenterprises.com",
   address:
