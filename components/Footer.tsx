@@ -57,10 +57,26 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10 px-4 py-5">
-        <p className="mx-auto max-w-7xl text-sm text-[#aeb9c8]">
-          &copy; {new Date().getFullYear()} {siteConfig.name}. All rights
-          reserved.
-        </p>
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
+          <p className="text-sm text-[#aeb9c8]">
+            &copy; {new Date().getFullYear()} {siteConfig.name}. All rights
+            reserved.
+          </p>
+          <div className="flex gap-5">
+            <Link
+              href="/terms"
+              className="text-sm text-[#aeb9c8] hover:text-[#f5b301]"
+            >
+              Terms
+            </Link>
+            <Link
+              href="/privacy"
+              className="text-sm text-[#aeb9c8] hover:text-[#f5b301]"
+            >
+              Privacy
+            </Link>
+          </div>
+        </div>
       </div>
     </footer>
   );

@@ -158,6 +158,29 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeading
+            label="Find us"
+            title="Visit us at our office"
+            description="Located at G-10 Markaz, Islamabad. Drop by or reach out on WhatsApp for quick support."
+            align="center"
+          />
+          <div className="mt-10 overflow-hidden rounded-[8px] border border-[#e7ebf0] bg-[#f8fafc] shadow-[0_16px_44px_rgba(7,17,31,0.06)]">
+            <iframe
+              title="Ummat Enterprises Rent-a-Car location on Google Maps"
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3320.297311153283!2d73.01217307570036!3d33.6753649733011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzPCsDQwJzMxLjMiTiA3M8KwMDAnNTMuMSJF!5e0!3m2!1sen!2s!4v1786126010859!5m2!1sen!2s"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="bg-[#fff8e1] px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 md:flex-row md:items-center">
           <div>

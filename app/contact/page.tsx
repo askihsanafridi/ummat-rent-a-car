@@ -84,13 +84,13 @@ export default function ContactPage() {
           <div className="min-h-[520px] overflow-hidden rounded-[8px] border border-[#e7ebf0] bg-[#f8fafc] shadow-[0_16px_44px_rgba(7,17,31,0.06)]">
             <iframe
               title="Ummat Enterprises Rent-a-Car location on Google Maps"
-              src="https://maps.google.com/maps?q=Flat%20No.%2013%2C%20Plot%2016%2C%20Gulistan%20Plaza%2C%202nd%20floor%2C%20G-10%20Markaz%2C%20Islamabad&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3320.297311153283!2d73.01217307570036!3d33.6753649733011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzPCsDQwJzMxLjMiTiA3M8KwMDAnNTMuMSJF!5e0!3m2!1sen!2s!4v1786126010859!5m2!1sen!2s"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: 520 }}
               allowFullScreen
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
+              referrerPolicy="strict-origin-when-cross-origin"
             />
           </div>
         </div>
