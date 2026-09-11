@@ -1,24 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
+import { cars } from "@/data/cars";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export function Hero() {
+  const heroCar = cars[0];
   return (
     <section className="relative overflow-hidden bg-white">
-      <div className="absolute inset-y-0 right-0 hidden w-1/2 lg:block">
-        <Image
-          src="/images/hero-car.svg"
-          alt="Premium sedan available for rent"
-          fill
-          priority
-          sizes="50vw"
-          className="object-contain object-right-bottom"
-        />
-      </div>
       <div className="pointer-events-none absolute bottom-0 right-0 h-64 w-64 bg-[#f5b301]/10 blur-3xl" />
 
-      <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[0.95fr_1.05fr] lg:px-8 lg:py-24">
-        <div className="max-w-3xl">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[0.95fr_1.05fr] lg:px-8 lg:py-24">
+        <div data-reveal className="max-w-3xl">
           <h1 className="max-w-4xl text-4xl font-semibold leading-[1.08] text-[#07111f] sm:text-5xl lg:text-6xl">
             Reliable Rent-a-Car Services for Every Journey
           </h1>
@@ -38,16 +30,16 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative min-h-[250px] lg:hidden">
+        <Link data-reveal href={`/fleet/${heroCar.slug}`} className="hero-photo relative block aspect-[3/2] overflow-hidden rounded-[8px] bg-[#f6f8fb] shadow-[0_24px_70px_rgba(7,17,31,0.12)]">
           <Image
-            src="/images/hero-car.svg"
-            alt="Premium sedan available for rent"
+            src={heroCar.image}
+            alt={heroCar.imageAlt}
             fill
-            priority
-            sizes="100vw"
+            preload
+            sizes="(min-width: 1280px) 620px, (min-width: 1024px) 50vw, 100vw"
             className="object-contain"
           />
-        </div>
+        </Link>
       </div>
     </section>
   );

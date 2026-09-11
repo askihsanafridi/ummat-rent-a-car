@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { cars } from "@/data/cars";
 
 const baseUrl = "https://ummatenterprises.com";
 
@@ -16,18 +17,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/privacy", priority: 0.3, changeFrequency: "yearly" as const },
   ];
 
-  // Add individual car pages
-  const carSlugs = [
-    "toyota-corolla",
-    "honda-civic",
-    "toyota-yaris",
-    "suzuki-alto",
-    "toyota-hiace",
-    "toyota-prado",
-  ];
-
-  const carRoutes = carSlugs.map((slug) => ({
-    url: `/fleet/${slug}`,
+  const carRoutes = cars.map((car) => ({
+    url: `/fleet/${car.slug}`,
     priority: 0.7,
     changeFrequency: "monthly" as const,
   }));

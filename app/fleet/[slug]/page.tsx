@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Image from "next/image";
+import { CarGallery } from "@/components/CarGallery";
 import Link from "next/link";
 import { cars } from "@/data/cars";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
@@ -29,7 +29,7 @@ export async function generateMetadata({
 
   return {
     title: `${car.name} for Rent in Islamabad | ${car.category}`,
-    description: `${car.name} rental in Islamabad. ${car.description} ${car.seats}-seater ${car.transmission} car with AC and professional driver. Book now on WhatsApp.`,
+    description: `${car.name} rental in Islamabad. ${car.description} ${car.bodyStyle} with professional driver availability. Book now on WhatsApp.`,
     keywords: [
       `${car.name} rental Islamabad`,
       `${car.name} rent a car Islamabad`,
@@ -40,18 +40,10 @@ export async function generateMetadata({
     openGraph: {
       title: `${car.name} for Rent in Islamabad | Ummat Enterprises`,
       description: car.description,
+      images: [{ url: car.image, alt: car.imageAlt }],
     },
   };
 }
-
-const relatedServices: Record<string, string[]> = {
-  "toyota-corolla": ["Airport Transfer", "Corporate Travel", "City Rides"],
-  "honda-civic": ["Corporate Travel", "VIP Transport", "Airport Transfer"],
-  "toyota-yaris": ["City Rides", "Family Travel", "Quick Pickups"],
-  "suzuki-alto": ["Budget City Rides", "Quick Pickups", "Daily Errands"],
-  "toyota-hiace": ["Wedding Transport", "Family Trips", "Group Travel"],
-  "toyota-prado": ["VIP Transport", "Wedding Rental", "Corporate Travel"],
-};
 
 export default async function CarDetailPage({ params }: PageProps) {
   const { slug } = await params;
@@ -66,12 +58,9 @@ export default async function CarDetailPage({ params }: PageProps) {
     "@type": "Car",
     name: car.name,
     description: car.description,
-    vehicleTransmission: car.transmission,
-    numberOfDoors: 4,
-    numberOfAxles: 2,
-    driveWheelConfiguration: "Front-wheel Drive",
-    fuelType: "Petrol",
-    seatingCapacity: car.seats,
+    image: car.gallery.map((photo) => photo.src),
+    bodyType: car.bodyStyle,
+    color: car.colors,
     offers: {
       "@type": "Offer",
       seller: {
@@ -103,16 +92,7 @@ export default async function CarDetailPage({ params }: PageProps) {
           </nav>
 
           <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
-            <div className="relative aspect-[16/10] overflow-hidden rounded-[8px] bg-[#f6f8fb]">
-              <Image
-                src={car.image}
-                alt={`${car.name} available for rent in Islamabad`}
-                fill
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover"
-                priority
-              />
-            </div>
+            <CarGallery key={car.slug} name={car.name} photos={car.gallery} />
 
             <div>
               <p className="text-sm font-semibold uppercase text-[#c89400]">
@@ -128,37 +108,43 @@ export default async function CarDetailPage({ params }: PageProps) {
 
               <dl className="mt-8 grid grid-cols-2 gap-4">
                 <div className="rounded-[8px] bg-[#f7f9fc] p-4">
-                  <dt className="text-sm text-[#7b8794]">Seats</dt>
+                  <dt className="text-sm text-[#7b8794]">Vehicle type</dt>
                   <dd className="mt-1 text-lg font-semibold text-[#07111f]">
-                    {car.seats} passengers
+                    {car.bodyStyle}
                   </dd>
                 </div>
                 <div className="rounded-[8px] bg-[#f7f9fc] p-4">
-                  <dt className="text-sm text-[#7b8794]">Transmission</dt>
+                  <dt className="text-sm text-[#7b8794]">Pictured colors</dt>
                   <dd className="mt-1 text-lg font-semibold text-[#07111f]">
-                    {car.transmission}
+                    {car.colors}
                   </dd>
                 </div>
                 <div className="rounded-[8px] bg-[#f7f9fc] p-4">
-                  <dt className="text-sm text-[#7b8794]">AC</dt>
+                  <dt className="text-sm text-[#7b8794]">Rates</dt>
                   <dd className="mt-1 text-lg font-semibold text-[#07111f]">
-                    {car.ac ? "Available" : "On request"}
+                    Quote on request
                   </dd>
                 </div>
                 <div className="rounded-[8px] bg-[#f7f9fc] p-4">
                   <dt className="text-sm text-[#7b8794]">Driver</dt>
                   <dd className="mt-1 text-lg font-semibold text-[#07111f]">
-                    Professional driver included
+                    Professional driver available
                   </dd>
                 </div>
               </dl>
+
+              <p className="mt-5 text-sm leading-6 text-[#5f6b7a]">
+                Confirm the exact vehicle, model year, seating, luggage space,
+                transmission, AC, and preferred color with our team. Wedding
+                decoration and pricing are arranged when booking.
+              </p>
 
               <div className="mt-8">
                 <h2 className="text-lg font-semibold text-[#07111f]">
                   Best for
                 </h2>
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {(relatedServices[car.slug] || []).map((service) => (
+                  {car.bestFor.map((service) => (
                     <span
                       key={service}
                       className="rounded-full border border-[#d8dde5] bg-white px-4 py-1.5 text-sm text-[#253041]"

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
+import { SiteMotion } from "@/components/SiteMotion";
 import { siteConfig } from "@/data/site";
 import "./globals.css";
 
@@ -174,6 +175,7 @@ export default function RootLayout({
         />
       </head>
       <body className="flex min-h-full flex-col antialiased">
+        <SiteMotion />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

@@ -4,7 +4,7 @@ import { Hero } from "@/components/Hero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceCard } from "@/components/ServiceCard";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import { featuredCars } from "@/data/cars";
+import { cars } from "@/data/cars";
 import { homeServices } from "@/data/services";
 
 const reasons = [
@@ -60,19 +60,19 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <SectionHeading
-              label="Featured cars"
-              title="Choose the right car for your next booking"
-              description="A clean, reliable fleet for individual rides, family movement, business travel, weddings, and airport transfers."
+              label={`Our complete fleet · ${cars.length} vehicles`}
+              title="Luxury arrivals to everyday journeys"
+              description="Explore every vehicle, starting with our luxury SUVs and premium cars, followed by family, group, and everyday travel options."
             />
             <Link
               href="/fleet"
               className="inline-flex min-h-12 w-fit items-center justify-center rounded-full border border-[#d8dde5] bg-white px-6 text-sm font-semibold text-[#07111f] transition hover:border-[#c89400] hover:bg-[#fff8e1]"
             >
-              View all cars
+              Explore fleet galleries
             </Link>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {featuredCars.map((car) => (
+            {cars.map((car) => (
               <CarCard key={car.slug} car={car} />
             ))}
           </div>

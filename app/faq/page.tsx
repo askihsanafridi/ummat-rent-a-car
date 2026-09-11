@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/PageHeader";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { cars } from "@/data/cars";
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions - Rent-a-Car Islamabad",
@@ -34,7 +35,7 @@ const faqs = [
   {
     question: "What cars are available for rent in Islamabad?",
     answer:
-      "Our fleet includes Toyota Corolla (executive sedan), Honda Civic (premium sedan), Toyota Yaris (compact sedan), Suzuki Alto (economy hatchback), Toyota Hiace (14-seater family van), and Toyota Prado (VIP SUV).",
+      `Our fleet includes ${cars.map((car) => car.name).join(", ")}. Browse the fleet for photos and contact our team to confirm the exact vehicle, seating, and availability.`,
   },
   {
     question: "How much does it cost to rent a car in Islamabad?",

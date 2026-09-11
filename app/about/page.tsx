@@ -65,10 +65,10 @@ export default function AboutPage() {
             />
           </div>
 
-          <div className="relative min-h-[330px] overflow-hidden rounded-[8px] bg-[#f8fafc]">
+          <div className="relative aspect-[3/2] overflow-hidden rounded-[8px] bg-[#f8fafc]">
             <Image
-              src="/images/hero-car.svg"
-              alt="Ummat Enterprises premium rental car"
+              src="/images/fleet/honda-civic-white-front-three-quarter.webp"
+              alt="White Honda Civic, front three-quarter view"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-contain"

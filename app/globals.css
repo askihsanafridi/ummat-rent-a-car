@@ -48,3 +48,72 @@ body {
     transparent 32%
   );
 }
+
+@keyframes soft-entrance {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes photo-fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  header {
+    animation: soft-entrance 650ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  header details[open] > div {
+    animation: soft-entrance 250ms ease-out;
+  }
+
+  .gallery-photo {
+    animation: photo-fade 350ms ease-out;
+  }
+
+  .car-card img, .hero-photo img {
+    transition: transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  main article {
+    transition: transform 300ms ease, box-shadow 300ms ease;
+  }
+
+  a.inline-flex, button, summary {
+    transition: transform 200ms ease, background-color 200ms ease,
+      border-color 200ms ease, box-shadow 200ms ease, color 200ms ease;
+  }
+
+  a.inline-flex:active, button:active, summary:active {
+    transform: scale(0.97);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .car-card:hover img, .hero-photo:hover img {
+      transform: scale(1.04);
+    }
+
+    main article:hover {
+      transform: translateY(-5px);
+    }
+
+    a.inline-flex:hover, button:hover {
+      transform: translateY(-2px);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  main article, a, button, summary {
+    transform: none !important;
+    translate: none !important;
+  }
+}
