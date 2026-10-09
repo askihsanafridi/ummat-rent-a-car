@@ -5,9 +5,12 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "About Ummat Enterprises Rent-a-Car",
+  title: "About Ummat Enterprises Rent-a-Car | Premier Chauffeur Service Islamabad",
   description:
-    "Learn about Ummat Enterprises Rent-a-Car, a professional car rental service for airport transfers, family trips, weddings, and corporate travel.",
+    "Learn about Ummat Enterprises Rent-a-Car in Islamabad: Our story, commitment to clean vehicles, vetted professional drivers, and 24/7 client care across Pakistan.",
+  alternates: {
+    canonical: "https://www.ummatrentacar.com/about",
+  },
 };
 
 const values = [
@@ -65,14 +68,30 @@ export default function AboutPage() {
             />
           </div>
 
-          <div className="relative aspect-[3/2] overflow-hidden rounded-[8px] bg-[#f8fafc]">
-            <Image
-              src="/images/fleet/honda-civic-white-front-three-quarter.webp"
-              alt="White Honda Civic, front three-quarter view"
-              fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-contain"
-            />
+          <div className="relative flex flex-col items-center justify-center rounded-[20px] border border-[#e2e8f0] bg-gradient-to-b from-[#f8fafc] via-white to-white p-8 text-center shadow-[0_16px_40px_rgba(7,17,31,0.06)]">
+            <div className="relative h-48 w-48 overflow-hidden rounded-[24px] border border-[#e2e8f0] bg-white p-3 shadow-[0_8px_30px_rgba(7,17,31,0.08)]">
+              <Image
+                src="/PHOTO-2026-10-09-11-17-11.jpg"
+                alt="Ummat Enterprises Official Brand Logo"
+                fill
+                priority
+                className="object-contain"
+              />
+            </div>
+            <div className="mt-6">
+              <span className="rounded-full bg-[#f8fafc] border border-[#e2e8f0] px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[#d4a329]">
+                Official Brand Emblem
+              </span>
+              <h3 className="mt-2 text-2xl font-extrabold text-[#07111f]">
+                Ummat Enterprises
+              </h3>
+              <p className="text-xs font-semibold uppercase tracking-wider text-[#64748b]">
+                Rent-a-Car • Islamabad & Rawalpindi
+              </p>
+              <p className="mt-3 text-xs text-[#5f6b7a] max-w-xs mx-auto">
+                Flat No. 13, Plot 16, Gulistan Plaza, 2nd floor, G-10 Markaz, Islamabad
+              </p>
+            </div>
           </div>
         </div>
       </section>

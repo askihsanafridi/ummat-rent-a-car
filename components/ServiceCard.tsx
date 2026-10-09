@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Service } from "@/data/services";
 
 type ServiceCardProps = {
@@ -74,17 +75,43 @@ function ServiceIcon({ icon }: { icon: Service["icon"] }) {
 }
 
 export function ServiceCard({ service }: ServiceCardProps) {
-  return (
-    <article className="rounded-[8px] border border-[#e7ebf0] bg-white p-6 shadow-[0_16px_44px_rgba(7,17,31,0.06)]">
-      <div className="flex h-12 w-12 items-center justify-center rounded-[8px] bg-[#fff4cf] text-[#b88300]">
-        <ServiceIcon icon={service.icon} />
+  const content = (
+    <article className="group flex flex-col justify-between rounded-[16px] border border-[#e2e8f0] bg-white p-6 shadow-[0_10px_30px_rgba(7,17,31,0.06)] transition duration-300 hover:-translate-y-1 hover:border-[#d4a329]/50 hover:shadow-[0_20px_45px_rgba(7,17,31,0.12)]">
+      <div>
+        <div className="flex items-center justify-between">
+          <div className="flex h-12 w-12 items-center justify-center rounded-[12px] bg-[#fff4cf] text-[#9a7100]">
+            <ServiceIcon icon={service.icon} />
+          </div>
+          {service.badge && (
+            <span className="rounded-full bg-[#f8fafc] border border-[#e2e8f0] px-2.5 py-1 text-[11px] font-bold text-[#64748b]">
+              {service.badge}
+            </span>
+          )}
+        </div>
+
+        <h3 className="mt-5 text-xl font-bold text-[#07111f] transition group-hover:text-[#d4a329]">
+          {service.title}
+        </h3>
+
+        <p className="mt-2.5 text-xs leading-relaxed text-[#5f6b7a] sm:text-sm">
+          {service.description}
+        </p>
       </div>
-      <h3 className="mt-5 text-xl font-semibold text-[#07111f]">
-        {service.title}
-      </h3>
-      <p className="mt-3 text-sm leading-7 text-[#5f6b7a]">
-        {service.description}
-      </p>
+
+      <div className="mt-5 pt-3 border-t border-[#f1f5f9] flex items-center justify-between text-xs font-bold text-[#07111f] group-hover:text-[#d4a329]">
+        <span>{service.href ? "View Details & Fleet" : "Inquire on WhatsApp"}</span>
+        <span>&rarr;</span>
+      </div>
     </article>
   );
+
+  if (service.href) {
+    return (
+      <Link href={service.href} className="block h-full">
+        {content}
+      </Link>
+    );
+  }
+
+  return content;
 }

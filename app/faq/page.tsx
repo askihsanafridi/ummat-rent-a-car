@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     "airport transfer Islamabad questions",
     "car rental pricing Pakistan",
   ],
+  alternates: {
+    canonical: "https://www.ummatrentacar.com/faq",
+  },
 };
 
 const faqs = [
@@ -40,7 +43,7 @@ const faqs = [
   {
     question: "How much does it cost to rent a car in Islamabad?",
     answer:
-      "Pricing depends on the car type, trip duration, and route. City travel starts from affordable hourly rates, and outstation trips are priced per kilometer. Contact us on WhatsApp for a customized quote.",
+      "Rental rates depend on the vehicle selected, trip duration, route (city vs outstation), and current fuel prices. For updated and latest prices, please contact us directly on WhatsApp (+92 335 6868001) for an instant, customized quote.",
   },
   {
     question: "Do you provide airport pickup and drop-off?",
@@ -65,7 +68,7 @@ const faqs = [
   {
     question: "How can I contact Ummat Enterprises Rent-a-Car?",
     answer:
-      "You can reach us on WhatsApp at +92 335 6868001, call us at the same number, or email info@ummatenterprises.com. We are also located at Flat No. 13, Plot 16, Gulistan Plaza, 2nd floor, G-10 Markaz, Islamabad.",
+      "You can reach us on WhatsApp at +92 335 6868001, call us at the same number, or email muhammadilyasafridi354@gmail.com. We are also located at Flat No. 13, Plot 16, Gulistan Plaza, 2nd floor, G-10 Markaz, Islamabad.",
   },
   {
     question: "What documents do I need to rent a car?",

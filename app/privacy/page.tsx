@@ -36,12 +36,12 @@ const sections = [
   {
     title: "Your Rights",
     content:
-      "You have the right to access, correct, or delete your personal information. To exercise these rights, contact us at info@ummatenterprises.com or +92 335 6868001.",
+      "You have the right to access, correct, or delete your personal information. To exercise these rights, contact us at muhammadilyasafridi354@gmail.com or +92 335 6868001.",
   },
   {
     title: "Contact Us",
     content:
-      "If you have questions about this Privacy Policy or our data practices, please contact us at info@ummatenterprises.com or visit our office at Flat No. 13, Plot 16, Gulistan Plaza, 2nd floor, G-10 Markaz, Islamabad.",
+      "If you have questions about this Privacy Policy or our data practices, please contact us at muhammadilyasafridi354@gmail.com or visit our office at Flat No. 13, Plot 16, Gulistan Plaza, 2nd floor, G-10 Markaz, Islamabad.",
   },
 ];
 

@@ -5,9 +5,12 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Booking - Ummat Enterprises Rent-a-Car",
+  title: "Book a Car with Driver in Islamabad | Instant WhatsApp Confirmation",
   description:
-    "Book a car with Ummat Enterprises Rent-a-Car through a professional WhatsApp booking form with pickup, drop-off, date, time, and car type details.",
+    "Book a car with Ummat Enterprises Rent-a-Car. Fast WhatsApp booking form for Islamabad airport transfers, city chauffeur rentals, weddings, and outstation trips.",
+  alternates: {
+    canonical: "https://www.ummatrentacar.com/booking",
+  },
 };
 
 const bookingNotes = [

@@ -1,4 +1,5 @@
 export const siteConfig = {
+  url: "https://www.ummatrentacar.com",
   name: "Ummat Enterprises Rent-a-Car",
   shortName: "Ummat Rent-a-Car",
   description:
@@ -6,7 +7,7 @@ export const siteConfig = {
   phoneDisplay: "+92 335 6868001",
   phoneHref: "tel:+923356868001",
   whatsappNumber: "923356868001",
-  email: "info@ummatenterprises.com",
+  email: "muhammadilyasafridi354@gmail.com",
   address:
     "Flat No. 13, Plot 16, Gulistan Plaza, 2nd floor, G-10 Markaz, Islamabad.",
   businessHours: [
@@ -18,12 +19,12 @@ export const siteConfig = {
 
 export const navLinks = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
   { label: "Fleet", href: "/fleet" },
   { label: "Services", href: "/services" },
   { label: "Pricing", href: "/pricing" },
-  { label: "FAQ", href: "/faq" },
   { label: "Booking", href: "/booking" },
+  { label: "About", href: "/about" },
+  { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ];
 

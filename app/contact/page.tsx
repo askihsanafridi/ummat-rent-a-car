@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
+import { DirectCallButton } from "@/components/DirectCallButton";
 import { PageHeader } from "@/components/PageHeader";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Contact - Ummat Enterprises Rent-a-Car",
+  title: "Contact Ummat Enterprises Rent-a-Car | Office in G-10 Markaz Islamabad",
   description:
-    "Contact Ummat Enterprises Rent-a-Car by phone, WhatsApp, email, or address for rent-a-car bookings and travel support.",
+    "Contact Ummat Enterprises Rent-a-Car: Call/WhatsApp +92 335 6868001 or visit our office at G-10 Markaz Islamabad. 24/7 airport transfers and luxury car rentals.",
+  alternates: {
+    canonical: "https://www.ummatrentacar.com/contact",
+  },
 };
 
 const contactCards = [
@@ -74,10 +78,13 @@ export default function ContactPage() {
                   </p>
                 ))}
               </div>
-              <WhatsAppButton
-                message="Hello Ummat Enterprises, I want to contact you about a rent-a-car booking."
-                className="mt-6 w-full"
-              />
+              <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                <DirectCallButton variant="primary" className="flex-1 text-sm font-bold" />
+                <WhatsAppButton
+                  message="Hello Ummat Enterprises, I want to contact you about a rent-a-car booking."
+                  className="flex-1 text-sm font-bold"
+                />
+              </div>
             </div>
           </div>
 
